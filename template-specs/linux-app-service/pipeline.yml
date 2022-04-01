@@ -1,0 +1,26 @@
+trigger:
+  batch: true
+  branches:
+    include:
+    - main
+  paths:
+    include:
+    - 'template-specs/linux-app-service/**'
+
+variables: 
+- name: ServiceConnectionName
+  value: ToyReusable
+- name: AzureResourceGroupName
+  value: ToyReusable
+- name: AzureRegion
+  value: westus3
+- name: TemplateSpecName
+  value: linux-app-service
+- name: TemplateSpecFilePath
+  value: template-specs/linux-app-service/main.bicep
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  # To be added.

@@ -1,0 +1,26 @@
+trigger:
+  batch: true
+  branches:
+    include:
+    - main
+  paths:
+    include:
+    - 'modules/storage-account/**'
+
+variables: 
+- name: ServiceConnectionName
+  value: ToyReusable
+- name: ModuleName
+  value: storage-account
+- name: ModuleRegistryServer
+  value: # To be added
+- name: ModuleFilePath
+  value: modules/storage-account/main.bicep
+- name: ModuleMetadataFilePath
+  value: modules/storage-account/metadata.json
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  # To be added.
